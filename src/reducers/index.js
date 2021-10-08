@@ -20,7 +20,6 @@ const reducer = (state = initialState, action)=>{
                 loading: false
             }
         case FETCH_FAIL:
-            console.log('fetcing failed')
             return {
                 ...state,
                 loading: false
