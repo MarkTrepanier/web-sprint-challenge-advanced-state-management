@@ -6,11 +6,14 @@ export const FETCH_FAIL = 'FETCH_FAIL';
 export const ADD_SMURF = 'ADD_SMURF';
 export const ERROR_VALUE = 'ERROR_VALUE';
 
-export const getSmurf = () => {
+export const fetchSmurfs = () => {
     return(dispatch => {
         dispatch({type:FETCH_SMURF});
 
-        axios.get()
+        // axios.get(`http://localhost:3333/smurfs`)
+        //     .then(res => {
+        //         dispatch(fetch)
+        //     })
     })
 }
 

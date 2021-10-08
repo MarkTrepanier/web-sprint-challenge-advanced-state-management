@@ -1,6 +1,6 @@
 import {ERROR_VALUE,ADD_SMURF,FETCH_FAIL,FETCH_SUCCESS,FETCH_SMURF} from '../actions'
 
-export const initialState = {
+const initialState = {
     smurfs: [],
     loading: false,
     error: ''
@@ -9,7 +9,10 @@ export const initialState = {
 const reducer = (state = initialState, action)=>{
     switch(action){
         case FETCH_SMURF:
-            return state
+            return {
+                ...state,
+                loading: true
+            }
         case FETCH_SUCCESS:
             return state
         case FETCH_FAIL:
@@ -17,6 +20,8 @@ const reducer = (state = initialState, action)=>{
         case ADD_SMURF:
             return state
         case ERROR_VALUE:
+            return state
+        default:
             return state
     }
 }
