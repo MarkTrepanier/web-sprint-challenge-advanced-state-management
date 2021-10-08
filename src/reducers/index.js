@@ -7,19 +7,22 @@ const initialState = {
 }
 
 const reducer = (state = initialState, action)=>{
-    switch(action){
+    switch(action.type){
         case FETCH_SMURF:
+            console.log('fetching smurf')
             return {
                 ...state,
                 loading: true
             }
         case FETCH_SUCCESS:
+            console.log('fetcing was a success')
             return {
                 ...state,
-                smurfs: [...state.smurfs, action.payload],
+                smurfs: action.payload,
                 loading: false
             }
         case FETCH_FAIL:
+            console.log('fetcing failed')
             return {
                 ...state,
                 loading: false
