@@ -1,8 +1,28 @@
+export const FETCH_SMURF = 'FETCH_SMURF';
+export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+export const FETCH_FAIL = 'FETCH_FAIL';
+export const ADD_SMURF = 'ADD_SMURF';
+export const ERROR_VALUE = 'ERROR_VALUE';
 
 export const initialState = {
+    smurfs: [],
+    loading: false,
+    error: ''
 }
 
-const reducer = ()=>{
+const reducer = (state = initialState, action)=>{
+    switch(action){
+        case FETCH_SMURF:
+            return state
+        case FETCH_SUCCESS:
+            return state
+        case FETCH_FAIL:
+            return state
+        case ADD_SMURF:
+            return state
+        case ERROR_VALUE:
+            return state
+    }
 }
 
 //**************DO NOT EDIT ANY CODE BEYOND THIS POINT**************//
