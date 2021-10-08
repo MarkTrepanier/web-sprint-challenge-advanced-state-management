@@ -3,7 +3,7 @@ import {SET_ERROR,ADD_SMURF,FETCH_FAIL,FETCH_SUCCESS,FETCH_SMURF} from '../actio
 const initialState = {
     smurfs: [],
     loading: false,
-    error: ''
+    error: ""
 }
 
 const reducer = (state = initialState, action)=>{
@@ -32,8 +32,11 @@ const reducer = (state = initialState, action)=>{
                 loading: false
             }
         case SET_ERROR:
-            return {...state,
-            error: action.payload}
+            return {
+                ...state,
+                error: action.payload,
+                loading: false
+        }
         default:
             return state
     }
