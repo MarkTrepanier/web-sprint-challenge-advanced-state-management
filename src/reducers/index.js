@@ -14,11 +14,22 @@ const reducer = (state = initialState, action)=>{
                 loading: true
             }
         case FETCH_SUCCESS:
-            return state
+            return {
+                ...state,
+                smurfs: [...state.smurfs, action.payload],
+                loading: false
+            }
         case FETCH_FAIL:
-            return state
+            return {
+                ...state,
+                loading: false
+            }
         case ADD_SMURF:
-            return state
+            return {
+                ...state,
+                smurfs: [...state.smurfs, action.payload],
+                loading: false
+            }
         case ERROR_VALUE:
             return state
         default:
