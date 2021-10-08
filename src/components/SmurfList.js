@@ -5,9 +5,6 @@ import { connect } from 'react-redux';
  const SmurfList = (props)=> {
     const isLoading = props.loading;
 
-    console.log('the smurfs')
-    console.log(props.smurfs)
-
     const testSmurf = {
         id:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
         name:'Poppa Smurf',

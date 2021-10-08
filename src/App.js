@@ -12,9 +12,7 @@ import { connect } from "react-redux";
 
 class App extends Component {
   componentDidMount(){
-    console.log('fetching')
     this.props.fetchSmurfs();
-    console.log(this.props.smurfs)
   }
   render() {
 

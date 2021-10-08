@@ -1,4 +1,4 @@
-import {ERROR_VALUE,ADD_SMURF,FETCH_FAIL,FETCH_SUCCESS,FETCH_SMURF} from '../actions'
+import {SET_ERROR,ADD_SMURF,FETCH_FAIL,FETCH_SUCCESS,FETCH_SMURF} from '../actions'
 
 const initialState = {
     smurfs: [],
@@ -9,13 +9,11 @@ const initialState = {
 const reducer = (state = initialState, action)=>{
     switch(action.type){
         case FETCH_SMURF:
-            console.log('fetching smurf')
             return {
                 ...state,
                 loading: true
             }
         case FETCH_SUCCESS:
-            console.log('fetcing was a success')
             return {
                 ...state,
                 smurfs: action.payload,
@@ -33,8 +31,9 @@ const reducer = (state = initialState, action)=>{
                 smurfs: [...state.smurfs, action.payload],
                 loading: false
             }
-        case ERROR_VALUE:
-            return state
+        case SET_ERROR:
+            return {...state,
+            error: action.payload}
         default:
             return state
     }
