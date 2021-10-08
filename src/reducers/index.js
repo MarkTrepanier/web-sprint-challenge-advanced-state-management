@@ -1,8 +1,4 @@
-export const FETCH_SMURF = 'FETCH_SMURF';
-export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-export const FETCH_FAIL = 'FETCH_FAIL';
-export const ADD_SMURF = 'ADD_SMURF';
-export const ERROR_VALUE = 'ERROR_VALUE';
+import {ERROR_VALUE,ADD_SMURF,FETCH_FAIL,FETCH_SUCCESS,FETCH_SMURF} from '../actions'
 
 export const initialState = {
     smurfs: [],
