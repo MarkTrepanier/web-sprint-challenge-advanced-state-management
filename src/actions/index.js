@@ -9,9 +9,11 @@ export const ERROR_VALUE = 'ERROR_VALUE';
 export const fetchSmurfs = () => {
     return(dispatch => {
         dispatch({type:FETCH_SMURF});
-
+        console.log('fetching data')
         axios.get(`http://localhost:3333/smurfs`)
             .then(res => {
+                console.log('success!')
+                console.log(res.data)
                 dispatch(fetchSuccess(res.data))
             })
             .catch(er=>{
